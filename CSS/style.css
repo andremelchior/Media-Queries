@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: blueviolet;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    color: white;
+    display: flex;
+    gap: 28%;
+    background-color: #333;
+}
+
+.header-1 {
+    width: 20%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 35px;
+}
+
+.header-1 h1 {
+    display: inline;
+    font-size: 18px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: blueviolet;
+    transition: 0.3s;
+}
+
+.header-1 h1:hover {
+    transition: 0.3s;
+    text-shadow: 0 0 10px blueviolet;
+}
+
+.menu-container{
+    display: flex;
+    justify-content: center;
+    width: 35%;
+}
+
+.components-list {
+    width: 300px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menu1 {
+    color: white;
+    font-size: 15px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    cursor: pointer;
+    border-bottom: 2px solid blueviolet;
+    text-shadow: 0 0 4px blueviolet;
+    color:blueviolet;
+}
+
+.menu {
+    color: white;
+    font-size: 15px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu:hover {
+    transition: 0.3s;
+    color: blueviolet;
+    text-shadow: 0 0 4px blueviolet;
+}
+
+.border-menu {
+    display: inline-block;
+    position: relative;
+}
+
+.border-menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 30%;
+    border-bottom: 2px solid blueviolet;
+    transition: 0.3s;
+}
+
+.border-menu:hover::after {
+    transition: 0.3s;
+    width: 100%;
+}
+
+header img{
+    display: none;
+}
+
+section{
+    margin-top: 60px;
+}
+
+.title{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.title h2{
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.section-1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.section-1 :where(.imagem, .parag){
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    padding: 20px;
+    align-items: center;
+}
+
+.parag p{
+    text-align: justify;
+    font-size: 20px;
+    color: white;
+}
+
+.imagem img{
+    width: 400px;
+}
+
+@media screen and (max-width: 300px){
+    body{
+        background-color: darkviolet;
+    }
+
+    section{
+        margin-top: 30px;
+    }
+
+    .section-1{
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .title h2{
+        margin-bottom: 10px;
+    }
+
+    .header-1{
+        margin-left: 18px;
+    }
+
+    .header-1 h1{
+        color: white;
+    }
+
+    header :where(ul, li){
+        display: none;
+    }
+
+    header{
+        height: 130px;
+        flex-wrap: wrap;
+        gap: 25%;
+    }
+
+    .hamb{
+        width: 20%;
+    }
+
+    .hamb img{
+        width: 50px;
+        height: 35px;
+        display: inline;
+    }
+
+
+    .section-1 :where(.imagem, .parag){
+        justify-content: center;
+        width: 92%;
+        padding: 10px;
+    }
+
+    .parag p{
+        text-align: justify;
+        font-size: 17px;
+        color: white;
+    }
+
+    .imagem img{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 301px) and (max-width: 600px){
+    .header-1 h1{
+        font-size: 16px;
+    }
+
+    header :where(ul, li){
+        display: none;
+    }
+
+    header{
+        gap: 5px;
+        justify-content: space-between;
+    }
+
+    .title h2{
+        border: 2px solid white;
+        border-radius: 15px;
+    }
+
+    .hamb{
+        width: 20%;
+    }
+
+    .hamb img{
+        width: 60px;
+        height: 45px;
+        display: inline;
+    }
+    
+    .parag{
+        width: 70%;
+    }
+    
+    .parag p{
+        font-size: 18px;
+    }
+    
+    .imagem{
+        justify-content: center;
+    }
+
+    .imagem img{
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .components-list{
+        gap: 25px;
+    }
+
+    .title{
+        padding: 0 0 20px 0;
+    }
+
+    .title h2{
+        display: inline;
+        border-bottom: 2px solid white;
+    }
+}
